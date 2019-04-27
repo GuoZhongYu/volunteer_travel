@@ -34,8 +34,8 @@ public class LoginController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public Result login(Model model, User user , HttpServletResponse response) {
-        return loginService.login(user,response);
+    public Result login(User user, HttpServletResponse response) {
+        return loginService.login(user, response);
     }
 
     @RequestMapping("/registerUI")
@@ -55,6 +55,15 @@ public class LoginController {
         cookie.setMaxAge(0);
         response.addCookie(cookie);
         return "index";
+    }
+
+    /**
+     *
+     */
+    @ResponseBody
+    @RequestMapping("/save")
+    public Result save(User user, HttpServletResponse response) {
+        return loginService.save(user, response);
     }
 
 }
