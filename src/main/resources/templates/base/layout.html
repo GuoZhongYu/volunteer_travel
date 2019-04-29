@@ -46,14 +46,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="top_header_add">
                             <ul>
-                                <li><a th:href="@{/}"><i class="fa fa-home"
-                                                                                     aria-hidden="true"></i> 义工旅行 </a>
+                                <li><a th:href="@{/}"><i class="fa fa-home" aria-hidden="true"></i> 义工旅行 </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="top_login">
                             <ul>
-                                <li id="login" ><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
+                                <li id="login" ><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请&nbsp;&nbsp;<a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
                                         th:href="@{/registerUI}">注册</a></li>
                                 <li id="logout" ><i class="fa fa-sign-in" ></i> 你好，<a id="yonghuming" href="Javascript:void(0)">
                                     </a>&nbsp;&nbsp;<a th:href="@{/logout}">退出</a>
@@ -90,21 +89,16 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
                                 <div class="et_navbar_search_wrapper hidden-xs">
-                                    <div class="et_search_bar" id="search_button">
-                                        <a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div id="search_open" class="et_search_box">
-                                        <input type="text" placeholder="请输入关键词">
-                                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                                    </div>
+                                    <!--<div class="et_search_bar" id="search_button">-->
+                                        <!--<a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>-->
+                                    <!--</div>-->
+                                    <!--<div id="search_open" class="et_search_box">-->
+                                        <!--<input type="text" placeholder="请输入关键词">-->
+                                        <!--<button><i class="fa fa-search" aria-hidden="true"></i></button>-->
+                                    <!--</div>-->
                                 </div>
                                 <ul class="nav navbar-nav" id="nav_filter">
-                                    <li><a th:href="@{/}">首页</a></li>
-                                    <li class="dropdown"><a th:href="@{/innIndexUI}">客栈列表</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="javascript:void(0);" >旅行游记 </a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </nav>
@@ -147,6 +141,30 @@
 <!--<script src="js/deleteCookie.js"></script>-->
 <!--js code-->
 <script th:inline="javascript" type="text/javascript">
+
+    <!-- 添加导航栏属性 -->
+    $.ajax({
+        url: '/travel/menu',
+        async: false,
+        dataType: 'json',
+        success: function (menus) {
+            for(var i in menus) {
+                $("#nav_filter").append('<li><a href=/travel' + menus[i].path + ' class="waves-effect"><span class="hide-menu">' + menus[i].name + '</span></a><li>');
+            }
+        }
+    });
+
+    function makeUL(menu) {
+        var html = ['<ul class="nav" id="side-menu">'];
+        $(menu).each(function (i, data) {
+            var lis = makeLI(data);
+            html.push(lis);
+        });
+        html.push('</ul>');
+        var a = html.join('');
+        return a;
+    }
+
 
     $(function(){
         var username = getCookie('username');
