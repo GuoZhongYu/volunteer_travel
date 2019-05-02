@@ -52,9 +52,13 @@
                         </div>
                         <div class="top_login">
                             <ul>
-                                <li id="login" ><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请&nbsp;&nbsp;<a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
-                                        th:href="@{/registerUI}">注册</a></li>
-                                <li id="logout" ><i class="fa fa-sign-in" ></i> 你好，<a id="yonghuming" href="Javascript:void(0)">
+                                <li id="login" ><i class="fa fa-sign-in" aria-hidden="true"></i>你好，请&nbsp;&nbsp;
+                                    <a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+                                    <a th:href="@{/registerUI}">新用户注册</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+                                    <a th:href="@{/innRegisterUI}">新客栈注册</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+                                </li>
+                                <li id="logout" ><i class="fa fa-sign-in" ></i> 你好，
+                                    <a id="yonghuming" href="Javascript:void(0)">
                                     </a>&nbsp;&nbsp;<a th:href="@{/logout}">退出</a>
                                 </li>
                             </ul>
