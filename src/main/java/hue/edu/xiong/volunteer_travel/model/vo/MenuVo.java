@@ -1,4 +1,4 @@
-package hue.edu.xiong.volunteer_travel.model.enums;
+package hue.edu.xiong.volunteer_travel.model.vo;
 
 import com.alibaba.fastjson.JSON;
 import lombok.Data;

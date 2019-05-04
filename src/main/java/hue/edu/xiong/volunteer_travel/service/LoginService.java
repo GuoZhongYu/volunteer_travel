@@ -27,7 +27,6 @@ public class LoginService {
             return ResultGenerator.genFailResult("用户名错误!");
         } else {
             if (user.getPassword().equals(userByUsername.getPassword())) {
-
                 saveInCookie(user, response);
                 return ResultGenerator.genSuccessResult();
             } else {

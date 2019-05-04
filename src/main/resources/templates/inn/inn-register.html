@@ -27,77 +27,140 @@
     <div class="page-container">
         <div class="container">
             <div class="row med_toppadder50 med_bottompadder50">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3">
-                    <form action="#" method="post" class="cy-form boxed" id="form-submit">
-                        <header>新客栈注册</header>
-                        <fieldset>
-                            <section>
-                                <label class="input">
-                                    <i class="icon-append fa fa-user"></i>
-                                    <input required type="text" placeholder="用户名" name="username" id="username">
-                                    <b class="tooltip tooltip-bottom-right">请输入正确的用户名,可用于登录和找回密码(必选)</b>
-                                </label>
-                            </section>
-                            <!--<section>-->
-                            <!--<label class="input">-->
-                            <!--<i class="icon-append fa fa-envelope"></i>-->
-                            <!--<input required type="email" placeholder="邮箱地址">-->
-                            <!--<b class="tooltip tooltip-bottom-right">用于验证用户(必选)</b>-->
-                            <!--</label>-->
-                            <!--</section>-->
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3">
+                    <form action="#" method="post" class="cy-form boxed" id="form-submit" enctype="multipart/form-data">
+                        <div class="page-body">
+                            <div class="content-div">
+                                <br/>
+                                <h4>&nbsp;新客栈注册</h4>
+                                <hr>
+                                <div style="padding-left: 30px;">
 
-                            <section>
-                                <label class="input">
-                                    <i class="icon-append fa fa-lock"></i>
-                                    <input required type="password" placeholder="密码" name="password" id="password">
-                                    <b class="tooltip tooltip-bottom-right">建议使用字母加数字或符号组合(必选)</b>
-                                </label>
-                            </section>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 first" id="username">
+                                            <div class="form-group find-name">
+                                                <label class="form-title control-label">
+                                                    <span class="text-danger">*</span><b>用户名</b>
+                                                </label>
+                                                <div class="form-content">
+                                                    <input type="text" maxlength="300" class="form-control"
+                                                           name="username">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <section>
-                                <label class="input">
-                                    <i class="icon-append fa fa-lock"></i>
-                                    <input required type="password" placeholder="确认密码" name="re-pass">
-                                    <b class="tooltip tooltip-bottom-right">请重复输入注册密码(必选)</b>
-                                </label>
-                            </section>
-                            <!--<section>-->
-                            <!--<label class="input">-->
-                            <!--<i class="icon-append fa fa-building"></i>-->
-                            <!--<input type="text" placeholder="单位">-->
-                            <!--<b class="tooltip tooltip-bottom-right">请输入单位名称(可选)</b>-->
-                            <!--</label>-->
-                            <!--</section>-->
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 first" id="password">
+                                            <div class="form-group find-name">
+                                                <label class="form-title control-label">
+                                                    <span class="text-danger">*</span><b>密码</b>
+                                                </label>
+                                                <div class="form-content">
+                                                    <input type="text" maxlength="300" class="form-control"
+                                                           name="password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <!--<div class="row">-->
-                                <!--<section class="col col-md-6">-->
-                                    <!--<label class="input">-->
-                                        <!--<i class="icon-append fa fa-key"></i>-->
-                                        <!--<input required type="text" placeholder="验证码">-->
-                                        <!--<b class="tooltip tooltip-bottom-right">输入验证码</b>-->
-                                    <!--</label>-->
-                                <!--</section>-->
-                                <!--<section class="col col-md-6">-->
-                                    <!--<label class="input med_toppadder5">-->
-                                        <!--<img src="images/vcode.jpg">-->
-                                        <!--<a class="change" href="javascript:void(0);">换一张</a>-->
-                                    <!--</label>-->
-                                <!--</section>-->
-                            <!--</div>-->
-                            <section>
-                                <label class="checkbox"><input type="checkbox" name="checkbox-inline"><i></i>我已经阅读并接受 <a
-                                        href="javascript:void(0);">免责声明</a></label>
-                            </section>
-                        </fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 first" id="re-password">
+                                            <div class="form-group find-name">
+                                                <label class="form-title control-label">
+                                                    <span class="text-danger">*</span><b>确认密码</b>
+                                                </label>
+                                                <div class="form-content">
+                                                    <input type="text" maxlength="300" class="form-control"
+                                                           name="re-password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 first" id="address">
+                                            <div class="form-group find-name" >
+                                                <label class="form-title control-label">
+                                                    <span class="text-danger"></span><b>地址</b>
+                                                </label>
+                                                <div class="form-content">
+                                                    <input type="text" maxlength="300" class="form-control"
+                                                           name="address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                        <footer>
-                            <button type="reset" class="button button-secondary">重 置</button>
-                            <button type="submit" class="button" onclick="saveForm()">注 册</button>
-                        </footer>
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="form-group">
+                                                <label class="form-title control-label"><b>营业执照</b></label>
+                                                <div class="form-content">
+                                                    <div class="col-sm-9 p-l-0">
+                                                        <input type="file" multiple id="license" class="form-control">
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                <span>
+                                                    <button class="btn-info" type="button"
+                                                            onclick="submitPicture('license')">上传</button>
+                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="form-control-static"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row m-0">
+                                        <label class="form-title control-label">&nbsp;</label>
+                                        <div class="form-content" style="padding-left: 0px;">
+                                            <div id="addFile-license"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="form-group">
+                                                <label class="form-title control-label"><b>身份证件</b></label>
+                                                <div class="form-content">
+                                                    <div class="col-sm-9 p-l-0">
+                                                        <input type="file" multiple id="idCard" class="form-control">
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                <span>
+                                                    <button class="btn-info" type="button"
+                                                            onclick="submitPicture('idCard')">上传</button>
+                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="form-control-static"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row m-0">
+                                        <label class="form-title control-label">&nbsp;</label>
+                                        <div class="form-content" style="padding-left: 0px;">
+                                            <div id="addFile-idCard"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button class="btn btn-success" type="button" onclick="saveForm()">保存</button>
+                                        <button class="btn btn-default" type="button"
+                                                onclick="javascript:history.back().reload()">返回
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
@@ -106,19 +169,18 @@
 
         function saveForm() {
             var username = $("input[name='username']").val();
+            if (username.trim() == '') {
+                layer.msg("请输入用户名");
+                return;
+            }
             var password = $("input[name='password']").val();
-            var re_pass = $("input[name='re-pass']").val();
-
-            if ($.trim(username) == '') {
-                layer.msg("username不能为空");
+            if (password.trim() == '') {
+                layer.msg("请输入密码");
                 return;
             }
-            if ($.trim(password) == '') {
-                layer.msg("password不能为空");
-                return;
-            }
-            if(password != re_pass) {
-                layer.msg("密码不一样");
+            var re_pass = $("input[name='re-password']").val();
+            if (password != re_pass) {
+                layer.msg("两次输入密码不一样");
                 return;
             }
 
@@ -137,6 +199,54 @@
             })
         }
 
+        function submitPicture(field) {
+            var target = $("#" + field).val();
+            if (target == '') {
+                layer.alert("请选择要上传的附件！");
+                return;
+            }
+            ;
+            var data = new FormData();
+            var files = document.getElementById(field).files;
+            for (var i = 0; i < files.length; i++) {
+                data.append("files", files[i]);
+            }
+            $.ajax({
+                url: '/travel/savePic',
+                data: data,
+                type: 'post',
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: 'json',
+                success: function (result) {
+                    console.log(result);
+                    var data = result.data;
+                    var fileHtml = [];
+                    fileHtml.push('&nbsp;<button type="button" class="btn btn-warning btn-sm waves-effect waves-light margin-label">');
+                    fileHtml.push('<input type="hidden" name="' + field + '" value="' + data.id + '">');
+                    fileHtml.push('' + data.originalName + '<b onclick="deleteFile(this)">×</b>');
+                    fileHtml.push('</button>&nbsp;');
+                    $("#addFile-" + field).html(fileHtml.join(''));
+                }
+            })
+        }
+
+        function deleteFile(_this) {
+            var id = $(_this).siblings("input").val();
+            $.ajax({
+                url: '/travel/delPic',
+                data: {'fileId': id},
+                type: 'post',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.code == 200) {
+                        $(_this).parent().remove();
+                    }
+                }
+            })
+        }
 
     </script>
 </div>

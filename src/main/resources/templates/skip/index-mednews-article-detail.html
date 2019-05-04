@@ -1,313 +1,208 @@
-
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="zh">
-<!--[endif]-->
-
-<head>
-    <meta charset="utf-8"/>
-    <title>旅行游记 </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta name="description" content="义工旅行"/>
-    <meta name="keywords" content="义工旅行"/>
-    <meta name="author" content="义工旅行"/>
-    <!--start theme style -->
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/linecons.css">
-    <link rel="stylesheet" type="text/css" href="plugins/slider-pro/css/slider-pro.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-</head>
-
-<body>
-<!-- preloader Start -->
-<div id="wrapper">
+<meta charset="utf-8"/>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+        layout:decorate="~{base/layout}">
+<div layout:fragment="content">
     <div id="page-wrapper">
 
-        <!-- preloader Start 加载动画 -->
-        <div id="preloader">
-            <!-- <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader"> -->
-            <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
-            </div>
-        </div>
-        <!--top header start 项目头部 -->
-        <div class="top_header_wrapper">
+        <!--med_tittle_section-->
+        <div class="med_tittle_section">
+            <div class="med_img_overlay"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="top_header_add">
-                            <ul>
-                                <li><a href="javascript:void(0);"><i class="fa fa-home"
-                                                         aria-hidden="true"></i> 旅行游记 </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="top_login">
-                            <ul>
-                                <li id="login" ><i class="fa fa-sign-in" aria-hidden="true"></i> 你好，请<a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a
-                                        th:href="@{/registerUI}">注册</a></li>
-                                <li id="logout" ><i class="fa fa-sign-in" ></i> 你好，<a id="yonghuming" href="Javascript:void(0)">
-                                </a>&nbsp;&nbsp;<a th:href="@{/logout}">退出</a>
-                                </li>
-                            </ul>
+                        <div class="med_tittle_cont_wrapper">
+                            <div class="med_tittle_cont">
+                                <ol class="breadcrumb">
+                                    <li><a href="index.html">首页</a></li>
+                                    <li>旅行游记</li>
+                                    <li>最新</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-<!--header menu wrapper-->
-        <div class="menu_wrapper header-area hidden-menu-bar stick">
+        <!-- med_tittle_section End -->
+        <!--service section start-->
+        <div class="page-container">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
-                        <!--<div class="header_logo">-->
-                        <!--<a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网"-->
-                        <!--class="img-responsive"></a>-->
-                        <!--</div>-->
-                    </div>
-                    <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
-                        <nav class="navbar hidden-xs">
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                        data-target="#bs-example-navbar-collapse-1"
-                                        aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
+                <div class="row med_toppadder50 med_bottompadder50">
+                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                        <div class="news-detail-box">
+                            <h3>为什么在大学里，我一定要去义工旅行？</h3>
+                            <div class="author-info">
+                                <span>2019-03-13</span>
+                                <span>来源：ForAnINSTANT</span>
+                                <span>作者：佚名</span>
+                                <span>浏览次数：13</span>
+                                <span><a href="javascript:void(0);" class="btn btn-info btn-sm">收藏</a></span>
                             </div>
-                            <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
-                                <div class="et_navbar_search_wrapper hidden-xs">
-                                    <div class="et_search_bar" id="search_button">
-                                        <a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div id="search_open" class="et_search_box">
-                                        <input type="text" placeholder="请输入关键词">
-                                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                                    </div>
-                                </div>
-                                <ul class="nav navbar-nav" id="nav_filter">
-                                    <li><a th:href="@{/}">首页</a></li>
-                                    <li class="dropdown"><a th:href="@{/innIndexUI}">客栈列表</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="javascript:void(0);" >旅行游记 </a>
-                                    </li>
-                                </ul>
+                            <div class="news-detail-content">
+                                <p>
+                                    义工旅行是有多种形式的。因为我选择的是偏向于「人文旅行」的义工旅行，即是以基本劳动力换取旅店的食宿，在这个过程中会和大家一起生活，玩闹，出游等等，所以在后续文章中也只会详细阐述这种，其他形式的会以我了解到的情况写下来，但只是粗略情况。
+                                </p>
+                                <p>
+                                    义工旅行是一种旅行方式，一种生活态度，不是义工方式。因为义工旅行的侧重点在于你的个人成长，整个旅途的收获。而它的义工形式是表现在你在店中的劳动，这种劳动其实是「有偿」的，但它却是没有工资，所以并非是完全义工。如果你想去做纯义工，建议到学校的青协或者社会上的义工组织哦~
+                                </p>
+                                <p>
+                                    义工旅行是带有安全风险，因为你是去完全陌生的环境。所以请你在决心出发前，做好充足的计划和准备。但不要过分担心，当你在做好准备时，我相信你的旅途不会很危险，计划都是为了有备无患。
+                                </p>
+                                <p>
+                                    我这两年去了两次义工旅行，去年是广西涠洲岛，今年是西藏拉萨，时间都是一个月。
+                                </p>
+                                <p>
+                                    推荐大家在大学期间去义工旅行的原因有两个：一是因为1820岁刚好是人们开始思考「自我」的平均年龄，你会逐渐发现你比以前的自己更加会独立思考，会去想「我是谁？我喜欢什么？我的人生意义是什么？」之类的问题，义工旅行会是个让你找到「自我」的加速剂，它会让你有飞速的个人成长。二是因为大学是你可以从地理上脱离家庭舒适圈的第一步，也是进入小社会的第一步，当你去义工旅行时，你会被你的大学身份、年龄相对店里的人比较小而被保护着的同时，在陌生环境生活学会独立和成长，尤其是临别义旅结束时，你发现自己特别不舍得离开。
+                                </p>
+                                <p>
+                                    不过以上这些「推荐原因」，都是在我今年去完第二次义工旅行后，才慢慢总结出来，当初就是因为想体验，觉得挺有趣的想去尝试，想交新朋友，又可以便宜的去旅行耶，这么赞的事哪里找！也没想过什么挑战自我跳出舒适圈之类的专业名词…可能这种就是，单纯简单的运气吧。（这真的是大一女学生真实独白了）</p>
+                                <p>说一下这个故事吧，就是我怎么就去了。
+                                    18岁那年上大学，可以完全自己掌控时间，自由了鸭！！！
+                                    我记得那是2016年的11月，无意中在学校的图书馆借了吴非那本《打工换宿》，打了鸡血般的喜欢，让本来只在高二时听说过义工旅行的我，更加坚定了我要去一趟。</p>
+                                <p>
+                                    吴非的打工换宿，是在国外。但我知道自己时间和资金有限，不可能出国。所以我选择了国内的义工旅行，可能是想体验的欲望很强，各种平台各种途径的搜资料做功课，这个过程中也发现了国内的义工旅行「五花八门」：有店家冲着义工旅行的名义去招免费劳动力，有小伙伴玩的很开心交了很多新朋友，有小伙伴被无良店家骗了劳动力以后抹黑义工旅行等等的，可见这个领域在国内是混乱模糊，没有教科书式的整理，没有家庭式的温室保护。</p>
+                                <p>
+                                    PS:国内的打工换宿的方式极少，因为很少会有“包住宿带工资且只用干活一个月每天工作四五个小时”的打工换宿形式，如果有那种叫寒暑假工且不可能工作时长那么短。这种情况在社会其他领域也有，在此文中仅介绍义工旅行。</p>
+                                <p>
+                                    大部分的国内义工旅行，都是没有合同之类的保障，多数都是「江湖承诺」（如果有朋友是有合同之类的文件，可以后台私聊我。希望国内的大型义工旅行组织可以促进义工合同保障的发展）。所以，如果你要进入这个领域，了解这个领域，注意这个领域是在社会不是在学校，尤其是刚上大学的小朋友们，记得打醒12分精神去做准备做笔记！！！当然这是丑话说在前，在之后的文章你会发现，这些准备都是值！得！的！而且，一！点！都！不！难！要相信付出和收获是成正比~</p>
+                                <p>
+                                    我两次都是先在贴吧豆瓣平台看帖子找到感兴趣的店，再按每个店每个平台去看资料看评价，这些店都有携程美团之类的预订平台，百度、搜狗搜有没有负面信息之类的。也知道网上有些义旅公众号组织，可是感觉没自己找的靠谱，不过更多的是…我感觉他们相比义工旅行的初心，他们的盈利性更重，所以我会优选自己去找。（纯干货篇会总结我的每种问题哒~）</p>
+                                <p>
+                                    第一次时候，我最终决定去涠洲岛的放客空间（这里真的不是打广告，他们真的很优秀！）。我还记得那是在17年的1月，我就加了老大微信说要做今年7月的义工，然后接连的6个月中，每个月都烦他问他想了解的事（捂脸笑），大概是被我坚（bu）持（yaolian）打动了吧，5月时候就特招我过去不用面试，当时真是超级兴奋还什么提前订好高铁票怕抢不到之类的。
+                                    PS:其实去北海的票不用抢，而去拉萨的话通常都抢不到硬卧火车。</p>
+                                <p>
+                                    现在想起来，挺感谢当初单纯未涉社会的自己，觉得有什么都去问清楚啊真的是什么都问，他们后来直接给我打电话一一解答。
+                                </p>
+                                <p>
+                                    其实我第一次去的时候，做的准备都只是比较基础式，没有像第二次去西藏做的准备那么多，想的比较简单。自己也是个幸运儿，我觉得我自己是一直被眷顾着，所以我对义工旅行每一个遇到的人我都十分感谢，没有你们我真的不会有现在这么美好的回忆。当然身边有朋友说是我心态好待人真诚（这次我真的没自恋啊），才会有每次都玩的这么开心，嗯看来这个也是个处世观~
+                                </p>
+                                <p>
+                                    无论你是什么身份，某行业大咖或是网红，在旅行中没有人会在意你的身份，大家都坦诚简单的相处，你甚至还会看见，很多人出来玩了才会去放飞自我，让自己更大胆去尝试。
+                                </p>
+                                <p>
+                                    人生其实没有什么是一定要做的，只有你想自己必须要完成什么。
+                                </p>
+                                <p>
+                                    「必须」，是你自己内心中真正想要过的一生。有时候那需要勇气去打破常规，有时候那要时间去证明。
+                                </p>
+                                <p>
+                                    刚好，大学就是一个完美的时间段，没有社会繁复的纷杂，没有钱财养家的担忧，18
+                                    20岁就开始，四年，你可以用这四年去找到你自己，尝试任何你感兴趣的，学习任何你感兴趣的，走出舒适圈挑战你自己，但一定要记得注意安全，小心骗子因为不是任何事情都可以去尝试的而且社会坏人多！
+                                </p>
+                                <p>
+                                    这个过程中你可能会很孤独，可能会因为身边没有人跟你一样，没人理解你，但不要害怕，看看我，我就是你的同路人，看看TED演讲，那里不安分且优秀的人很多，你也可以多参加活动去找你的志同道合（这个超有用）。活在当下，享受阳光。万事开头难，无论这件事是有形的还是无形的，当你肯迈出第一步做时，你已经超过了很多同龄人了。
+                                    在这个过程中你也可能会中途放弃，但也别质疑自己，我两年多以来尝试的新事物也很多，现在还保持做的就几个，但我还是会不断去尝试去挑战，对我来说活到老学到老，也玩到老。那是不是说放弃的事情都浪费了时间？肯定不是呀宝贝！你要明白，任何你感兴趣的、想做的，可能有些会中途放弃，有些会成为了你一辈子的爱好。但是这些你感兴趣尝试的事物，其实是跟你真正的喜好是有关联的，因为在你选择做每一件事情时，你自己是无意识地去按照你的喜好、能力去做出选择，只是你没有在意识控制下去感知到这个选择。你只是需要通过不断尝试挑战自己，然后拿个时间出来规整它们，最终逐渐找到「它」。更重要的是，它们是需要时间去证明的，也就是需要你的勇气TO
+                                    HAVE A TRY。
+                                </p>
+                                <p>来源链接：<a
+                                        href=https://www.rdmag.com/news/2019/03/gene-identified-increases-risk-antibiotic-reaction
+                                        target="_blank">https://www.rdmag.com/news/2019/03/gene-identified-increases-risk-antibiotic-reaction</a>
+                                </p>
+
+
                             </div>
-                        </nav>
+                        </div>
+
                     </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="sider-card">
+                            <div class="sider-card-header">
+                                <h3>热门游记</h3>
+                            </div>
+                            <ul class="sider-list-model-a">
+                                <li><a href="javascript:void(0);">游记1</a></li>
+                                <li><a href="javascript:void(0);">游记2</a></li>
+                                <li><a href="javascript:void(0);">游记3</a></li>
+                                <li><a href="javascript:void(0);">游记</a></li>
+                                <li><a href="javascript:void(0);">游记</a></li>
+                                <li><a href="javascript:void(0);">游记</a></li>
+                                <li><a href="javascript:void(0);">游记</a></li>
+                                <li><a href="javascript:void(0);">游记</a></li>
+                                <li><a href="javascript:void(0);">游记</a></li>
+                                <li><a href="javascript:void(0);">游记</a></li>
+                            </ul>
+                        </div>
+                        <div class="sider-card">
+                            <div class="sider-card-header">
+                                <h3>热门景点</h3>
+                            </div>
+                            <ul class="sider-list-model-b">
+                                <li><a href="javascript:void(0);">武汉</a></li>
+                                <li><a href="javascript:void(0);">长沙</a></li>
+                                <li><a href="javascript:void(0);">上海</a></li>
+                                <li><a href="javascript:void(0);">北京</a></li>
+                                <li><a href="javascript:void(0);">西雅图</a></li>
+                                <li><a href="javascript:void(0);">东京</a></li>
+                                <li><a href="javascript:void(0);">巴黎</a></li>
+                                <li><a href="javascript:void(0);">英国</a></li>
+                                <li><a href="javascript:void(0);">奥尔良</a></li>
+                                <li><a href="javascript:void(0);">台湾</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-                    <!-- /.navbar-collapse -->
+        <!--service section end-->
 
-                    <!-- /.container-fluid -->
-<!--header wrapper end-->
-<!--med_tittle_section-->
-<div class="med_tittle_section">
-    <div class="med_img_overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="med_tittle_cont_wrapper">
-                    <div class="med_tittle_cont">
-                        <ol class="breadcrumb">
-                            <li><a href="index.html">首页</a></li>
-                            <li>旅行游记</li>
-                            <li>最新</li>
-                        </ol>
-                    </div>
+
+        <!-- ser_footer section start-->
+        <div class="footer_wrapper">
+            <div class="container">
+                <div class="text-center">
+                    <p><a href="javascript:void(0);">网站地图</a> | <a href="javascript:void(0);">帮助中心</a> | <a
+                            href="javascript:void(0);">联系我们</a>
+                        | <a href="javascript:void(0);">关于平台</a> | <a href="javascript:void(0);">网站维护</a></p>
+                    <p>版权所有 ©湖北第二师范学院</p>
+                    <p>鄂123456789-0</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="up_wrapper">
+                    <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up"
+                                                                aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
+        <!--js code-->
     </div>
-</div>
-<!-- med_tittle_section End -->
-<!--service section start-->
-<div class="page-container">
-    <div class="container">
-        <div class="row med_toppadder50 med_bottompadder50">
-            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-                <div class="news-detail-box">
-                    <h3>为什么在大学里，我一定要去义工旅行？</h3>
-                    <div class="author-info">
-                        <span>2019-03-13</span>
-                        <span>来源：ForAnINSTANT</span>
-                        <span>作者：佚名</span>
-                        <span>浏览次数：13</span>
-                        <span><a href="javascript:void(0);" class="btn btn-info btn-sm">收藏</a></span>
-                    </div>
-                    <div class="news-detail-content">
-                        <p>
-                            义工旅行是有多种形式的。因为我选择的是偏向于「人文旅行」的义工旅行，即是以基本劳动力换取旅店的食宿，在这个过程中会和大家一起生活，玩闹，出游等等，所以在后续文章中也只会详细阐述这种，其他形式的会以我了解到的情况写下来，但只是粗略情况。
-                        </p>
-                        <p>
-                            义工旅行是一种旅行方式，一种生活态度，不是义工方式。因为义工旅行的侧重点在于你的个人成长，整个旅途的收获。而它的义工形式是表现在你在店中的劳动，这种劳动其实是「有偿」的，但它却是没有工资，所以并非是完全义工。如果你想去做纯义工，建议到学校的青协或者社会上的义工组织哦~
-                        </p>
-                        <p>
-                            义工旅行是带有安全风险，因为你是去完全陌生的环境。所以请你在决心出发前，做好充足的计划和准备。但不要过分担心，当你在做好准备时，我相信你的旅途不会很危险，计划都是为了有备无患。
-                        </p>
-                        <p>
-                            我这两年去了两次义工旅行，去年是广西涠洲岛，今年是西藏拉萨，时间都是一个月。
-                        </p>
-                        <p>
-                            推荐大家在大学期间去义工旅行的原因有两个：一是因为1820岁刚好是人们开始思考「自我」的平均年龄，你会逐渐发现你比以前的自己更加会独立思考，会去想「我是谁？我喜欢什么？我的人生意义是什么？」之类的问题，义工旅行会是个让你找到「自我」的加速剂，它会让你有飞速的个人成长。二是因为大学是你可以从地理上脱离家庭舒适圈的第一步，也是进入小社会的第一步，当你去义工旅行时，你会被你的大学身份、年龄相对店里的人比较小而被保护着的同时，在陌生环境生活学会独立和成长，尤其是临别义旅结束时，你发现自己特别不舍得离开。
-                        </p>
-                        <p>不过以上这些「推荐原因」，都是在我今年去完第二次义工旅行后，才慢慢总结出来，当初就是因为想体验，觉得挺有趣的想去尝试，想交新朋友，又可以便宜的去旅行耶，这么赞的事哪里找！也没想过什么挑战自我跳出舒适圈之类的专业名词…可能这种就是，单纯简单的运气吧。（这真的是大一女学生真实独白了）</p>
-                        <p>说一下这个故事吧，就是我怎么就去了。
-                            18岁那年上大学，可以完全自己掌控时间，自由了鸭！！！
-                            我记得那是2016年的11月，无意中在学校的图书馆借了吴非那本《打工换宿》，打了鸡血般的喜欢，让本来只在高二时听说过义工旅行的我，更加坚定了我要去一趟。</p>
-                        <p>吴非的打工换宿，是在国外。但我知道自己时间和资金有限，不可能出国。所以我选择了国内的义工旅行，可能是想体验的欲望很强，各种平台各种途径的搜资料做功课，这个过程中也发现了国内的义工旅行「五花八门」：有店家冲着义工旅行的名义去招免费劳动力，有小伙伴玩的很开心交了很多新朋友，有小伙伴被无良店家骗了劳动力以后抹黑义工旅行等等的，可见这个领域在国内是混乱模糊，没有教科书式的整理，没有家庭式的温室保护。</p>
-                        <p>PS:国内的打工换宿的方式极少，因为很少会有“包住宿带工资且只用干活一个月每天工作四五个小时”的打工换宿形式，如果有那种叫寒暑假工且不可能工作时长那么短。这种情况在社会其他领域也有，在此文中仅介绍义工旅行。</p>
-                        <p>大部分的国内义工旅行，都是没有合同之类的保障，多数都是「江湖承诺」（如果有朋友是有合同之类的文件，可以后台私聊我。希望国内的大型义工旅行组织可以促进义工合同保障的发展）。所以，如果你要进入这个领域，了解这个领域，注意这个领域是在社会不是在学校，尤其是刚上大学的小朋友们，记得打醒12分精神去做准备做笔记！！！当然这是丑话说在前，在之后的文章你会发现，这些准备都是值！得！的！而且，一！点！都！不！难！要相信付出和收获是成正比~</p>
-                        <p>我两次都是先在贴吧豆瓣平台看帖子找到感兴趣的店，再按每个店每个平台去看资料看评价，这些店都有携程美团之类的预订平台，百度、搜狗搜有没有负面信息之类的。也知道网上有些义旅公众号组织，可是感觉没自己找的靠谱，不过更多的是…我感觉他们相比义工旅行的初心，他们的盈利性更重，所以我会优选自己去找。（纯干货篇会总结我的每种问题哒~）</p>
-                        <p>第一次时候，我最终决定去涠洲岛的放客空间（这里真的不是打广告，他们真的很优秀！）。我还记得那是在17年的1月，我就加了老大微信说要做今年7月的义工，然后接连的6个月中，每个月都烦他问他想了解的事（捂脸笑），大概是被我坚（bu）持（yaolian）打动了吧，5月时候就特招我过去不用面试，当时真是超级兴奋还什么提前订好高铁票怕抢不到之类的。
-                            PS:其实去北海的票不用抢，而去拉萨的话通常都抢不到硬卧火车。</p>
-                        <p>
-                            现在想起来，挺感谢当初单纯未涉社会的自己，觉得有什么都去问清楚啊真的是什么都问，他们后来直接给我打电话一一解答。
-                        </p>
-                        <p>
-                            其实我第一次去的时候，做的准备都只是比较基础式，没有像第二次去西藏做的准备那么多，想的比较简单。自己也是个幸运儿，我觉得我自己是一直被眷顾着，所以我对义工旅行每一个遇到的人我都十分感谢，没有你们我真的不会有现在这么美好的回忆。当然身边有朋友说是我心态好待人真诚（这次我真的没自恋啊），才会有每次都玩的这么开心，嗯看来这个也是个处世观~
-                        </p>
-                        <p>
-                            无论你是什么身份，某行业大咖或是网红，在旅行中没有人会在意你的身份，大家都坦诚简单的相处，你甚至还会看见，很多人出来玩了才会去放飞自我，让自己更大胆去尝试。
-                        </p>
-                        <p>
-                            人生其实没有什么是一定要做的，只有你想自己必须要完成什么。
-                        </p>
-                        <p>
-                            「必须」，是你自己内心中真正想要过的一生。有时候那需要勇气去打破常规，有时候那要时间去证明。
-                        </p>
-                        <p>
-                            刚好，大学就是一个完美的时间段，没有社会繁复的纷杂，没有钱财养家的担忧，18 20岁就开始，四年，你可以用这四年去找到你自己，尝试任何你感兴趣的，学习任何你感兴趣的，走出舒适圈挑战你自己，但一定要记得注意安全，小心骗子因为不是任何事情都可以去尝试的而且社会坏人多！
-                        </p>
-                        <p>
-                            这个过程中你可能会很孤独，可能会因为身边没有人跟你一样，没人理解你，但不要害怕，看看我，我就是你的同路人，看看TED演讲，那里不安分且优秀的人很多，你也可以多参加活动去找你的志同道合（这个超有用）。活在当下，享受阳光。万事开头难，无论这件事是有形的还是无形的，当你肯迈出第一步做时，你已经超过了很多同龄人了。
-                            在这个过程中你也可能会中途放弃，但也别质疑自己，我两年多以来尝试的新事物也很多，现在还保持做的就几个，但我还是会不断去尝试去挑战，对我来说活到老学到老，也玩到老。那是不是说放弃的事情都浪费了时间？肯定不是呀宝贝！你要明白，任何你感兴趣的、想做的，可能有些会中途放弃，有些会成为了你一辈子的爱好。但是这些你感兴趣尝试的事物，其实是跟你真正的喜好是有关联的，因为在你选择做每一件事情时，你自己是无意识地去按照你的喜好、能力去做出选择，只是你没有在意识控制下去感知到这个选择。你只是需要通过不断尝试挑战自己，然后拿个时间出来规整它们，最终逐渐找到「它」。更重要的是，它们是需要时间去证明的，也就是需要你的勇气TO HAVE A TRY。
-                        </p>
-                        <p >来源链接：<a href=https://www.rdmag.com/news/2019/03/gene-identified-increases-risk-antibiotic-reaction target="_blank">https://www.rdmag.com/news/2019/03/gene-identified-increases-risk-antibiotic-reaction</a> </p>
+
+    <script th:inline="javascript" type="text/javascript">
+
+        $(function () {
+            var username = getCookie('username');
+            console.log(username);
+            if (!!username) {
+                $("#login").hide();
+                $("#logout").show();
+                $("#yonghuming").text(username);
+            } else {
+                console.log('隐藏后面登出');
+                $("#login").show();
+                $("#logout").hide();
+            }
+        });
 
 
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                <div class="sider-card">
-                    <div class="sider-card-header">
-                        <h3>热门游记</h3>
-                    </div>
-                    <ul class="sider-list-model-a">
-                        <li><a href="javascript:void(0);">游记1</a></li>
-                        <li><a href="javascript:void(0);">游记2</a></li>
-                        <li><a href="javascript:void(0);">游记3</a></li>
-                        <li><a href="javascript:void(0);">游记</a></li>
-                        <li><a href="javascript:void(0);">游记</a></li>
-                        <li><a href="javascript:void(0);">游记</a></li>
-                        <li><a href="javascript:void(0);">游记</a></li>
-                        <li><a href="javascript:void(0);">游记</a></li>
-                        <li><a href="javascript:void(0);">游记</a></li>
-                        <li><a href="javascript:void(0);">游记</a></li>
-                    </ul>
-                </div>
-                <div class="sider-card">
-                    <div class="sider-card-header">
-                        <h3>热门景点</h3>
-                    </div>
-                    <ul class="sider-list-model-b">
-                        <li><a href="javascript:void(0);">武汉</a></li>
-                        <li><a href="javascript:void(0);">长沙</a></li>
-                        <li><a href="javascript:void(0);">上海</a></li>
-                        <li><a href="javascript:void(0);">北京</a></li>
-                        <li><a href="javascript:void(0);">西雅图</a></li>
-                        <li><a href="javascript:void(0);">东京</a></li>
-                        <li><a href="javascript:void(0);">巴黎</a></li>
-                        <li><a href="javascript:void(0);">英国</a></li>
-                        <li><a href="javascript:void(0);">奥尔良</a></li>
-                        <li><a href="javascript:void(0);">台湾</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!--service section end-->
-
-
-
-<!-- ser_footer section start-->
-<div class="footer_wrapper">
-    <div class="container">
-        <div class="text-center">
-            <p><a href="javascript:void(0);">网站地图</a> | <a href="javascript:void(0);">帮助中心</a> | <a href="javascript:void(0);">联系我们</a>
-                | <a href="javascript:void(0);">关于平台</a> | <a href="javascript:void(0);">网站维护</a></p>
-            <p>版权所有 ©湖北第二师范学院</p>
-            <p>鄂123456789-0</p>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="up_wrapper">
-            <a href="javascript:" id="return-to-top"><i class="fa fa fa-arrow-up" aria-hidden="true"></i></a>
-        </div>
-    </div>
-</div>
-<!--main js files-->
-<script src="js/jquery_min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="plugins/slider-pro/js/jquery.sliderPro.min.js"></script>
-<script src="plugins/owlcarousel/js/owl.carousel.min.js"></script>
-<script src="layer/layer.js"></script>
-
-<script th:inline="javascript" type="text/javascript">
-
-    $(function(){
-        var username = getCookie('username');
-        console.log(username);
-        if (!!username){
-            $("#login").hide();
-            $("#logout").show();
-            $("#yonghuming").text(username);
-        } else {
-            console.log('隐藏后面登出');
-            $("#login").show();
-            $("#logout").hide();
-        }
-    });
-
-
-    function getCookie(key){
-        var arr1=document.cookie.split("; ");//由于cookie是通过一个分号+空格的形式串联起来的，所以这里需要先按分号空格截断,变成[name=Jack,pwd=123456,age=22]数组类型；
-        for(var i=0;i<arr1.length;i++){
-            var arr2=arr1[i].split("=");//通过=截断，把name=Jack截断成[name,Jack]数组；
-            if(arr2[0]==key){
-                return decodeURI(arr2[1]);
+        function getCookie(key) {
+            var arr1 = document.cookie.split("; ");//由于cookie是通过一个分号+空格的形式串联起来的，所以这里需要先按分号空格截断,变成[name=Jack,pwd=123456,age=22]数组类型；
+            for (var i = 0; i < arr1.length; i++) {
+                var arr2 = arr1[i].split("=");//通过=截断，把name=Jack截断成[name,Jack]数组；
+                if (arr2[0] == key) {
+                    return decodeURI(arr2[1]);
+                }
             }
         }
-    }
 
-    function deleteCookie(){
-        var name=getCookie('username');
-        $.removeCookie('name');
-    }
-
-
-</script>
-
-<!--js code-->
-</body>
+        function deleteCookie() {
+            var name = getCookie('username');
+            $.removeCookie('name');
+        }
 
 
+    </script>
+</div>
 </html>

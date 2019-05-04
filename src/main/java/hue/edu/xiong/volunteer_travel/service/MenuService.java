@@ -1,7 +1,7 @@
 package hue.edu.xiong.volunteer_travel.service;
 
 import hue.edu.xiong.volunteer_travel.model.enums.Authority;
-import hue.edu.xiong.volunteer_travel.model.enums.MenuVo;
+import hue.edu.xiong.volunteer_travel.model.vo.MenuVo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

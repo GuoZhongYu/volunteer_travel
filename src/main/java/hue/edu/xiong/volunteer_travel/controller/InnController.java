@@ -1,7 +1,9 @@
 package hue.edu.xiong.volunteer_travel.controller;
 
 import hue.edu.xiong.volunteer_travel.core.Result;
-import hue.edu.xiong.volunteer_travel.core.ResultGenerator;
+import hue.edu.xiong.volunteer_travel.model.Inn;
+import hue.edu.xiong.volunteer_travel.service.InnService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,21 +15,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class InnController {
 
+    @Autowired
+    private InnService innService;
+
     /**
      * 客栈列表展示
+     *
      * @return
      */
     @RequestMapping("/innIndexUI")
-    public String index(){
+    public String index() {
         return "inn/inn-index";
     }
 
     /**
      * 客栈注册页面
+     *
      * @return
      */
     @RequestMapping("/innRegisterUI")
-    public String innRegisterUI(){
+    public String innRegisterUI() {
         return "inn/inn-register";
     }
 
@@ -36,9 +43,11 @@ public class InnController {
      */
     @ResponseBody
     @RequestMapping("/innSave")
-    public Result innSave(){
-        return ResultGenerator.genSuccessResult();
+    public Result innSave(Inn inn) {
+        return innService.innSave(inn);
     }
+
+
 
 
 }
