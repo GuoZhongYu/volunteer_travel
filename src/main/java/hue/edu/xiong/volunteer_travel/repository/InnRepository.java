@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InnRepository extends JpaRepository<Inn, String> {
+    Inn findByUsername(String username);
 }

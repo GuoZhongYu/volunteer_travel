@@ -27,12 +27,19 @@ public class LoginService {
             return ResultGenerator.genFailResult("用户名错误!");
         } else {
             if (user.getPassword().equals(userByUsername.getPassword())) {
-                saveInCookie(user, response);
+                saveInCookie(userByUsername, response);
                 return ResultGenerator.genSuccessResult();
             } else {
                 return ResultGenerator.genFailResult("密码错误!");
             }
         }
+    }
+
+    /**
+     * 登出
+     */
+    public void logout(User user, HttpServletResponse response) {
+        saveInCookie(user, 0, response);
     }
 
     /**
@@ -52,9 +59,18 @@ public class LoginService {
     }
 
     protected void saveInCookie(User user, HttpServletResponse response) {
-        Cookie cookie = new Cookie("username", user.getUsername());
-        cookie.setPath("/");
-        cookie.setMaxAge(3600);
-        response.addCookie(cookie);
+        saveInCookie(user, 3600, response);
+    }
+
+    protected void saveInCookie(User user, int time, HttpServletResponse response) {
+        Cookie username = new Cookie("username", user.getUsername());
+        username.setPath("/");
+        username.setMaxAge(time);
+        response.addCookie(username);
+
+        Cookie type = new Cookie("type", user.getType());
+        type.setPath("/");
+        type.setMaxAge(time);
+        response.addCookie(type);
     }
 }

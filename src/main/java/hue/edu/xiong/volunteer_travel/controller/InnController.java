@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * @Author Xiong YuSong
  * @Date 2019/4/18
@@ -43,11 +45,17 @@ public class InnController {
      */
     @ResponseBody
     @RequestMapping("/innSave")
-    public Result innSave(Inn inn) {
-        return innService.innSave(inn);
+    public Result innSave(Inn inn, HttpServletResponse response) {
+        return innService.innSave(inn, response);
     }
 
-
+    /**
+     * 发布信息
+     */
+    @RequestMapping("publishInfo")
+    public String publishInfo() {
+        return "inn/publishInfo";
+    }
 
 
 }

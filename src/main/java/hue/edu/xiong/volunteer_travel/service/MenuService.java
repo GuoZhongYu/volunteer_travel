@@ -17,11 +17,19 @@ import java.util.stream.Stream;
 @Service
 public class MenuService {
 
-    public List<MenuVo> getMenus() {
-        Authority[] values = Authority.values();
+    public List<MenuVo> getMenus(String type) {
+
+        Authority[] values = new Authority[]{
+                Authority.homePage, Authority.innIndexUI, Authority.diaryUI, Authority.services};
+        if ("inn".equals(type)) {
+            values = new Authority[]{
+                    Authority.homePage, Authority.innIndexUI, Authority.diaryUI, Authority.publishInfo, Authority.services};
+        } else if ("volunteer".equals(type)) {
+            values = new Authority[]{
+                    Authority.homePage, Authority.innIndexUI, Authority.diaryUI, Authority.volunteerForum, Authority.services};
+        }
         List<MenuVo> lists = new ArrayList<>();
-        Stream.of(values).forEach((value) -> {
-            lists.add(new MenuVo(value.getName(), value.getPath())); });
+        Stream.of(values).forEach((value) -> lists.add(new MenuVo(value.getName(), value.getPath())));
         return lists;
     }
 }

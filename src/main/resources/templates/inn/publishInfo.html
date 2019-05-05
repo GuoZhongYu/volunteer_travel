@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+        layout:decorate="~{base/layout}">
+<div layout:fragment="content">
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a th:href="@{/}">首页</a></li>
+                                <li>发布客栈信息</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- med_tittle_section End -->
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3">
+                    <form action="#" method="post" class="cy-form boxed" id="form-submit" enctype="multipart/form-data">
+                        <div class="page-body">
+                            <div class="content-div">
+                                <br/>
+                                <h4>&nbsp;发布客栈信息</h4>
+                                <hr>
+                                <div style="padding-left: 30px;">
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 first" id="username">
+                                            <div class="form-group find-name">
+                                                <label class="form-title control-label">
+                                                    <span class="text-danger"></span><b>客栈名称</b>
+                                                </label>
+                                                <div class="form-content">
+                                                    <input type="text" maxlength="300" class="form-control"
+                                                           name="username">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 first">
+                                            <div class="form-group find-name">
+                                                <label class="form-title control-label">
+                                                    <span class="text-danger"></span><b>客栈信息</b>
+                                                </label>
+                                                <div class="form-content">
+                                                    <textarea rows="4" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 first">
+                                            <div class="form-group find-name">
+                                                <label class="form-title control-label">
+                                                    <span class="text-danger"></span><b>招工要求</b>
+                                                </label>
+                                                <div class="form-content">
+                                                    <textarea rows="4" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn btn-success" type="button" onclick="saveForm()">提交</button>
+                                        <button class="btn btn-default" type="button"
+                                                onclick="javascript:history.back().reload()">返回
+                                        </button>
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script th:inline="javascript">
+    </script>
+</div>
+</html>

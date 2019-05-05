@@ -12,7 +12,7 @@ public enum Authority {
 
     homePage("首页", "/"),
     innIndexUI("客栈列表", "/innIndexUI"),
-    diaryUI("旅行日记", "/diaryUI"),
+    diaryUI("旅行游记", "/diaryUI"),
     volunteerForum("义工论坛", "/volunteerForum"),
     publishInfo("发布信息", "/publishInfo"),
     services("第三方服务", "/services");

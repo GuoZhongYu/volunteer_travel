@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.PrimitiveIterator;
 
 /**
  * @author : orange
@@ -25,23 +26,25 @@ public class PictureService {
     @Autowired
     private PictureRepository pictureRepository;
 
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+
     public Result save(MultipartFile file) {
-        String name = System.currentTimeMillis() + ".jpg";
-        Picture picture = new Picture(IdGenerator.id(), name, file.getOriginalFilename(), savePath(file, name));
+        String ymd = sdf.format(new Date());
+        String name = ymd + File.separator + System.currentTimeMillis() + ".jpg";
+        savePath(file, name);
+        Picture picture = new Picture(IdGenerator.id(), name, file.getOriginalFilename(), name);
         pictureRepository.saveAndFlush(picture);
         return ResultGenerator.genSuccessResult(picture);
     }
 
-    private String savePath(MultipartFile file, String name) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-        String ymd = sdf.format(new Date());
+    private void savePath(MultipartFile file, String name) {
         // 创建根目录
         File homeDir = new File("E:/picpath/");
         if (!homeDir.exists() || !homeDir.isDirectory()) {
             homeDir.mkdirs();
         }
         // 创建父级目录
-        File descFile = new File(homeDir, ymd + File.separator + name);
+        File descFile = new File(homeDir, name);
         if (!descFile.getParentFile().exists()) {
             descFile.getParentFile().mkdirs();
         }
@@ -50,8 +53,10 @@ public class PictureService {
         } catch (IllegalStateException | IOException e) {
             throw new ServiceException("文件上传失败!");
         }
-        return descFile.getPath();
     }
 
 
+    public Picture findById(String id) {
+        return pictureRepository.findById(id).orElse(null);
+    }
 }

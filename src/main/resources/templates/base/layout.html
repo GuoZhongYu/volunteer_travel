@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
 </head>
 <body>
 
@@ -51,13 +51,13 @@
                         </div>
                         <div class="top_login">
                             <ul>
-                                <li id="login" ><i class="fa fa-sign-in" aria-hidden="true"></i>你好，请&nbsp;&nbsp;
+                                <li id="login"><i class="fa fa-sign-in" aria-hidden="true"></i>你好，请&nbsp;&nbsp;
                                     <a th:href="@{/loginUI}">登录</a>&nbsp;&nbsp;/&nbsp;&nbsp;
                                     <a th:href="@{/registerUI}">新用户注册</a>&nbsp;&nbsp;/&nbsp;&nbsp;
                                     <a th:href="@{/innRegisterUI}">新客栈注册</a>&nbsp;&nbsp;/&nbsp;&nbsp;
                                 </li>
-                                <li id="logout" ><i class="fa fa-sign-in" ></i> 你好，
-                                    <a id="yonghuming" href="Javascript:void(0)">
+                                <li id="logout"><i class="fa fa-sign-in"></i> 你好，
+                                    <a id="yonghuming" th:href="@{/personInfo}">
                                     </a>&nbsp;&nbsp;<a th:href="@{/logout}">退出</a>
                                 </li>
                             </ul>
@@ -72,8 +72,8 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12">
                         <!--<div class="header_logo">-->
-                            <!--<a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网"-->
-                                                                        <!--class="img-responsive"></a>-->
+                        <!--<a href="index.html" class="hidden-xs"><img src="images/logo.png" alt="logo" title="创药网"-->
+                        <!--class="img-responsive"></a>-->
                         <!--</div>-->
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-10 col-xs-12">
@@ -93,11 +93,11 @@
                             <div class="collapse navbar-collapse respose_nav" id="bs-example-navbar-collapse-1">
                                 <div class="et_navbar_search_wrapper hidden-xs">
                                     <!--<div class="et_search_bar" id="search_button">-->
-                                        <!--<a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>-->
+                                    <!--<a href="javascript:void(0);"><i class="fa fa-search" aria-hidden="true"></i></a>-->
                                     <!--</div>-->
                                     <!--<div id="search_open" class="et_search_box">-->
-                                        <!--<input type="text" placeholder="请输入关键词">-->
-                                        <!--<button><i class="fa fa-search" aria-hidden="true"></i></button>-->
+                                    <!--<input type="text" placeholder="请输入关键词">-->
+                                    <!--<button><i class="fa fa-search" aria-hidden="true"></i></button>-->
                                     <!--</div>-->
                                 </div>
                                 <ul class="nav navbar-nav" id="nav_filter">
@@ -145,57 +145,48 @@
 <!--js code-->
 <script th:inline="javascript" type="text/javascript">
 
-    <!-- 添加导航栏属性 -->
+    // 添加导航栏属性
     $.ajax({
         url: '/travel/menu',
+        data: {"type" : getCookie('type')},
         async: false,
         dataType: 'json',
         success: function (menus) {
-            for(var i in menus) {
+            for (var i in menus) {
                 $("#nav_filter").append('<li><a href=/travel' + menus[i].path + ' class="waves-effect"><span class="hide-menu">' + menus[i].name + '</span></a><li>');
             }
         }
     });
 
-    function makeUL(menu) {
-        var html = ['<ul class="nav" id="side-menu">'];
-        $(menu).each(function (i, data) {
-            var lis = makeLI(data);
-            html.push(lis);
-        });
-        html.push('</ul>');
-        var a = html.join('');
-        return a;
-    }
-
-
-    $(function(){
+    $(function () {
         var username = getCookie('username');
+        var type = getCookie('type');
         console.log(username);
-        if (!!username){
+        console.log(type);
+        if (!!username) {
             $("#login").hide();
             $("#logout").show();
             $("#yonghuming").text(username);
         } else {
-            console.log('隐藏后面登出');
+            // console.log('隐藏后面登出');
             $("#login").show();
             $("#logout").hide();
         }
     });
 
 
-    function getCookie(key){
-        var arr1=document.cookie.split("; ");//由于cookie是通过一个分号+空格的形式串联起来的，所以这里需要先按分号空格截断,变成[name=Jack,pwd=123456,age=22]数组类型；
-        for(var i=0;i<arr1.length;i++){
-            var arr2=arr1[i].split("=");//通过=截断，把name=Jack截断成[name,Jack]数组；
-            if(arr2[0]==key){
+    function getCookie(key) {
+        var arr1 = document.cookie.split("; ");//由于cookie是通过一个分号+空格的形式串联起来的，所以这里需要先按分号空格截断,变成[name=Jack,pwd=123456,age=22]数组类型；
+        for (var i = 0; i < arr1.length; i++) {
+            var arr2 = arr1[i].split("=");//通过=截断，把name=Jack截断成[name,Jack]数组；
+            if (arr2[0] == key) {
                 return decodeURI(arr2[1]);
             }
         }
     }
 
-    function deleteCookie(){
-        var name=getCookie('username');
+    function deleteCookie() {
+        var name = getCookie('username');
         $.removeCookie('name');
     }
 

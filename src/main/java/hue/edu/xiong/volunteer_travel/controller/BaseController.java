@@ -23,8 +23,8 @@ public class BaseController {
 
     @RequestMapping("/menu")
     @ResponseBody
-    public List<MenuVo> menu() {
-        return menuService.getMenus();
+    public List<MenuVo> menu(String type) {
+        return menuService.getMenus(type);
     }
 
 }

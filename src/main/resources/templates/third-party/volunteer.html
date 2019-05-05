@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+        layout:decorate="~{base/layout}">
+<div layout:fragment="content">
+    <!--med_tittle_section-->
+    <div class="med_tittle_section">
+        <div class="med_img_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="med_tittle_cont_wrapper">
+                        <div class="med_tittle_cont">
+                            <ol class="breadcrumb">
+                                <li><a th:href="@{/}">首页</a></li>
+                                <li>第三方服务</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--service section start-->
+    <div class="page-container">
+        <div class="container">
+            <div class="row med_toppadder50 med_bottompadder50">
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                    <div class="filter-type-box">
+                        <div class="cy-news-grid-item">
+                            <div class="cy-media-body">
+                                <div class="cy-grid-body">
+                                    <h5><a href="#">服务列表 : </a></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cy-news-grid-item">
+                            <div class="cy-media-body">
+                                <div class="cy-grid-body">
+                                    <h5><a href="#">义工申诉维权</a></h5>
+                                    <div class="cy-summary-intro">
+                                        <p><a href="#">如客栈未按照约定履行承诺, 提交材料, 由平台核实之后, 对客栈进行对应的处理</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cy-news-grid-item">
+                            <div class="cy-media-body">
+                                <div class="cy-grid-body">
+                                    <h5><a href="#">义工过程安全保障</a></h5>
+                                    <div class="cy-summary-intro">
+                                        <p><a href="#">平台为义工进行投保，义工旅行过程中，实时记录义工位置，并将位置信息发送给紧急联系人及客栈负责人，如在义工过程中出现安全问题，可联系义工服务平台（平台会在义工旅行地点建立服务中心），进行解决。</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cy-news-grid-item">
+                            <div class="cy-media-body">
+                                <div class="cy-grid-body">
+                                    <h5><a href="#">咨询服务</a></h5>
+                                    <div class="cy-summary-intro">
+                                        <p><a href="#">联系平台人工或智能客服进行咨询服务</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--service section end-->
+        <script th:inline="javascript">
+
+
+        </script>
+    </div>
+</html>
