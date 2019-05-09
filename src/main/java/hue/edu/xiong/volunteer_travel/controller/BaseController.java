@@ -26,7 +26,6 @@ public class BaseController {
     public List<MenuVo> menu(String type) {
         return menuService.getMenus(type);
     }
-
 }
 
 

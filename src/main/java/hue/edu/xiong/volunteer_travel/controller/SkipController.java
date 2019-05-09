@@ -16,17 +16,25 @@ public class SkipController {
         return "login/index-mednews-article-detail.html";
     }
 
-
     @RequestMapping("/imagesUI")
     public String imagesUI(){
-        return "skip/index-mednews-article-detail.html";
+        return "skip/index-mednews-images-detail.html";
     }
 
     @RequestMapping("/images")
     public String images(Model model) {
-        return "login/index-mednews-article-detail.html";
+        return "skip/index-mednews-images-detail.html";
     }
 
+    @RequestMapping("/innUI")
+    public String innUI(){
+        return "skip/index-inn-article-detail.html";
+    }
+
+    @RequestMapping("/inn")
+    public String inn(Model model) {
+        return "skip/index-inn-article-detail.html";
+    }
 
 
 }

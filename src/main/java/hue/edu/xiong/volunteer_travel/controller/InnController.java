@@ -32,7 +32,6 @@ public class InnController {
 
     /**
      * 客栈注册页面
-     *
      * @return
      */
     @RequestMapping("/innRegisterUI")
@@ -56,6 +55,5 @@ public class InnController {
     public String publishInfo() {
         return "inn/publishInfo";
     }
-
 
 }
